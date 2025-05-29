@@ -637,7 +637,7 @@
             "data": {
               "type": "tm.Flow",
               "name": "Queries",
-              "description": "",
+              "description": "Instrucciones de SQL enviadas hacia la base de datos.",
               "outOfScope": false,
               "reasonOutOfScope": "",
               "hasOpenThreats": false,
@@ -645,7 +645,26 @@
               "isEncrypted": false,
               "isPublicNetwork": false,
               "protocol": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "75b6fef8-6192-4fd6-99be-392df773d142",
+                  "title": "Ataque Man in the middle",
+                  "status": "Mitigated",
+                  "severity": "Low",
+                  "type": "Information disclosure",
+                  "description": "Un atacante podría interceptar las consultas de la base de datos en tránsito y obtener información confidencial, como credenciales de la base de datos",
+                  "mitigation": "Aplicar una conexión cifrada en el servidor de base de datos.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 10,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 0,
+                "informationDisclosure": 1,
+                "denialOfService": 0
+              }
             },
             "labels": [
               "Queries"
@@ -667,56 +686,6 @@
               {
                 "x": 610,
                 "y": 480
-              }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Resultados Web App Query",
-              "description": "",
-              "outOfScope": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": []
-            },
-            "labels": [
-              "Resultados Web App Query"
-            ],
-            "id": "bdafc537-a996-428d-a015-b9e5d46f22e3",
-            "source": {
-              "cell": "a7279175-2eb4-40b7-b3eb-444d1ee69735",
-              "port": "15bd117d-73f5-4324-b2db-4940fbdf8ae2"
-            },
-            "target": {
-              "cell": "25e2a839-bee2-4266-bdb8-7cd101c73355",
-              "port": "7188b7a7-d125-4052-be40-399400bc99c4"
-            },
-            "vertices": [
-              {
-                "x": 720,
-                "y": 420
               }
             ]
           },
@@ -749,6 +718,75 @@
               {
                 "x": 650,
                 "y": 380
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Resultados Web App Query",
+              "description": "Datos recuperados desde la base de datos.",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "5214c399-f671-4247-8cc7-9d052107641a",
+                  "title": "Ataque Man in the middle",
+                  "status": "Mitigated",
+                  "severity": "Low",
+                  "type": "Information disclosure",
+                  "description": "Un atacante intercepta las comunicaciones entre el cliente y el servidor para acceder a datos confidenciales transmitidos durante consultas a la base de datos.",
+                  "mitigation": "Aplicar una conexión cifrada en el servidor de base de datos.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 11,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 0,
+                "informationDisclosure": 1,
+                "denialOfService": 0
+              }
+            },
+            "labels": [
+              "Resultados Web App Query"
+            ],
+            "id": "bdafc537-a996-428d-a015-b9e5d46f22e3",
+            "source": {
+              "cell": "a7279175-2eb4-40b7-b3eb-444d1ee69735",
+              "port": "15bd117d-73f5-4324-b2db-4940fbdf8ae2"
+            },
+            "target": {
+              "cell": "25e2a839-bee2-4266-bdb8-7cd101c73355",
+              "port": "7188b7a7-d125-4052-be40-399400bc99c4"
+            },
+            "vertices": [
+              {
+                "x": 720,
+                "y": 420
               }
             ]
           },
@@ -1050,6 +1088,6 @@
     ],
     "diagramTop": 1,
     "reviewer": "Guillermo Vera",
-    "threatTop": 9
+    "threatTop": 11
   }
 }
