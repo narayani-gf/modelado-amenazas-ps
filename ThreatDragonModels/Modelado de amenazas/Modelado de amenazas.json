@@ -2,12 +2,19 @@
   "version": "2.4.1",
   "summary": {
     "title": "Modelado de amenazas",
-    "owner": "Fabiola Narayani Guzmán Figueroa, Álvaro Vázquez Aguirre",
+    "owner": "EE Programación Segura",
     "description": "Mercado Libre es una aplicación web enfocada en la seguridad que estandariza los procesos para la empresa. Este sistema cuenta con dos tipos de roles: usuarios y administradores. Los usuarios pueden realizar pedidos para adquirir productos de diversas categorías. Los administradores tienen la capacidad de gestionar los productos, usuarios, categorías y archivos, de la misma manera pueden visualizar los pedidos realizados y la bitácora.",
     "id": 0
   },
   "detail": {
-    "contributors": [],
+    "contributors": [
+      {
+        "name": "Fabiola Narayani Guzmán Figueroa"
+      },
+      {
+        "name": "Álvaro Vázquez Aguirre"
+      }
+    ],
     "diagrams": [
       {
         "id": 0,
